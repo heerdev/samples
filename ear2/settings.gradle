@@ -1,0 +1,3 @@
+rootProject.name = "ear2"
+include 'project1'
+include 'project3'

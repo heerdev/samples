@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'ear'
+}
+
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+
+    deploy project(path: ':project1', configuration: 'archives')
+    deploy project(path: ':project3', configuration: 'archives')
+}
+ear {
+    version = ''
+    deploymentDescriptor {
+        version = '5'
+        displayName = project.name
+        description = project.name + " ${project.version}"
+        webModule("project1-0.0.1-SNAPSHOT.war", "project1")
+        webModule("project3-0.0.1-SNAPSHOT.war", "project3")
+    }
+    manifest {
+        attributes(
+                'Implementation-Title': project.name,
+                'Implementation-Version': project.version,
+                'Built-By': System.getProperty('user.name'),
+                'Built-JDK': System.getProperty('java.version'),
+                'Built-Gradle': project.gradle.gradleVersion
+        )
+    }
+}
