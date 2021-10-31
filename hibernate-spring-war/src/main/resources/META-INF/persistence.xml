@@ -3,18 +3,17 @@
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
              version="2.1">
-    <persistence-unit name="riskclient">
+    <persistence-unit name="my-db">
 
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <non-jta-data-source>jndi/sampledb2</non-jta-data-source>
         <class>com.jpa.entities.PartyStatus</class>
         <properties>
-<!--        <property name="javax.persistence.jdbc.url" value="jdbc:db2://mmidb2rskdev201.metmom.mmih.biz:60038/INTCT2DV" />
-        <property name="javax.persistence.jdbc.user" value="RSKCLNT" />
-        <property name="javax.persistence.jdbc.password" value="R@kcqTsyd7" />-->
-            <property name="hibernate.default_schema" value="RISK" />
- <!--       <property name="hibernate.connection.driver_class" value="com.ibm.db2.jcc.DB2Driver"/>
-        <property name="hibernate.dialect" value="org.hibernate.dialect.DB2Dialect"/>-->
+<!--        <property name="javax.persistence.jdbc.url" value="jdbc:XXXXXX" />
+        <property name="javax.persistence.jdbc.user" value="XXX"XXXX" />-->
+            <property name="hibernate.default_schema" value="XXX" />
+ <!--       <property name="hibernate.connection.driver_class" value="cXXXXXX"/>
+        <property name="hibernate.dialect" value="XXXXXXX"/>-->
         </properties>
     </persistence-unit>
 </persistence>
