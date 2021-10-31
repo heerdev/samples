@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: JPA_SAMPLE
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/sampledb
+    username: postgres
+    password: password
+  jpa:
+    show-sql: true
+    dialect: org.hibernate.dialect.PostgreSQLDialect
+    spring:
+      jpa:
+        properties:
+          hibernate:
+            format_sql: true
+
+
+
+
+server:
+  port: 8080
+
